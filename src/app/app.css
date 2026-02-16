@@ -4,3 +4,18 @@
   background-color: #f3f4f6;
   min-height: 100vh;
 }
+
+.layout {
+  display: flex;
+  min-height: calc(100vh - 120px);
+}
+
+app-sidebar {
+  width: 30%;
+}
+
+.content {
+  width: 70%;
+  padding: 3rem;
+  background-color: #ffffff;
+}

@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './components/header/header';
+import { SidebarComponent } from './components/sidebar/sidebar';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [
+    HeaderComponent,
+    SidebarComponent
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {}

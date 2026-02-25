@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
-import { UpperCasePipe } from '@angular/common';
+import { UpperCasePipe, TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [UpperCasePipe],
+  imports: [TitleCasePipe],
   templateUrl: './header.html',
-  styleUrl: './header.css'
+  styleUrls: ['./header.css']
 })
 export class HeaderComponent {
 
-  greeting: string = '';
-  firstName = "Jimena";
-  lastName = "Estrada";
-  title = "Secretaria Bilingüe";
+  greeting = '';
+  firstName = 'Jimena';
+  lastName = 'Estrada';
+  title = 'Secretaria Bilingüe';
 
   constructor() {
     this.setGreeting();
@@ -23,15 +23,16 @@ export class HeaderComponent {
     const hour = new Date().getHours();
 
     if (hour >= 5 && hour < 12) {
-      this.greeting = 'Good morning/Buenos días';
+      this.greeting = 'Buenos días';
     } else if (hour >= 12 && hour < 19) {
-      this.greeting = 'Good afternoon/Buenas tardes';
+      this.greeting = 'Buenas tardes';
     } else {
-      this.greeting = 'Good night/Buenas noches';
+      this.greeting = 'Buenas noches';
     }
   }
 
   downloadCV() {
-    alert("Descargando CV...");
+    alert('Descargando CV...');
   }
+
 }
